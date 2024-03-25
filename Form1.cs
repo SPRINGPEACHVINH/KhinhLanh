@@ -26,14 +26,8 @@ namespace Lab1_Bai4
         string num_dec = "";
         ComboBox Origin_num = new ComboBox();
         ComboBox Destinate_num = new ComboBox();
-        Regex regex_hex = new Regex("[0-9A-F]");
-        Regex regex_bin = new Regex("[0-1]");
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        Regex regex_hex = new Regex("^[0-9A-Fa-f]+$");
+        Regex regex_bin = new Regex("^[0-1]+$");
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,7 +53,7 @@ namespace Lab1_Bai4
                 else if(Origin_num.Text == "Binary")
                 {
                     int midle = int.Parse(textBox1.Text);
-                    if (regex_bin.IsMatch(textBox1.Text) == false)
+                    if (!regex_bin.IsMatch(textBox1.Text))
                     {
                         MessageBox.Show("Invalid Binary Number");
                         return;
@@ -74,13 +68,15 @@ namespace Lab1_Bai4
                 else
                 {
                     string midle = textBox1.Text;
-                    if (regex_hex.IsMatch(midle) == false)
+                    if (!regex_hex.IsMatch(midle))
                     {
                         MessageBox.Show("Invalid Hex Number");
                     }
                     else
                     {
-
+                        num_bin = Convert.ToString(Convert.ToInt32(midle, 16),2);
+                        num_dec = Convert.ToString(Convert.ToInt32(midle, 16),10);
+                        num_hex = textBox1.Text;
                     }
                 }
                 if(Destinate_num.Text == "Decimal")
@@ -100,6 +96,14 @@ namespace Lab1_Bai4
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Out_Click(object sender, EventArgs e)
+        {
+            Result.Text = "";
+            textBox1.Text = "";
+            comboBox1.Text = "Decimal";
+            comboBox2.Text = "Binary";
         }
     }
 }

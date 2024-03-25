@@ -39,6 +39,7 @@
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.label3 = new System.Windows.Forms.Label();
             this.Result = new System.Windows.Forms.TextBox();
+            this.Out = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -52,24 +53,20 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.Nhapmotso);
-            this.groupBox1.Location = new System.Drawing.Point(32, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(21, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(738, 288);
+            this.groupBox1.Size = new System.Drawing.Size(492, 187);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(234, 194);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(156, 126);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(470, 48);
+            this.button1.Size = new System.Drawing.Size(313, 31);
             this.button1.TabIndex = 8;
             this.button1.Text = "Thực hiện";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,8 +76,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(446, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(297, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 15);
             this.label2.TabIndex = 7;
@@ -93,11 +89,11 @@
             "Decimal",
             "Binary",
             "Hex"});
-            this.comboBox2.Location = new System.Drawing.Point(524, 135);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox2.Location = new System.Drawing.Point(349, 88);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 28);
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.Text = "Binary";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
@@ -107,19 +103,18 @@
             "Decimal",
             "Binary",
             "Hex"});
-            this.comboBox1.Location = new System.Drawing.Point(236, 135);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(157, 88);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.Text = "Decimal";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 137);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(80, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 2;
@@ -127,18 +122,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 74);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Location = new System.Drawing.Point(157, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(468, 26);
+            this.textBox1.Size = new System.Drawing.Size(313, 20);
             this.textBox1.TabIndex = 1;
             // 
             // Nhapmotso
             // 
             this.Nhapmotso.AutoSize = true;
             this.Nhapmotso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nhapmotso.Location = new System.Drawing.Point(79, 80);
-            this.Nhapmotso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nhapmotso.Location = new System.Drawing.Point(53, 52);
             this.Nhapmotso.Name = "Nhapmotso";
             this.Nhapmotso.Size = new System.Drawing.Size(80, 15);
             this.Nhapmotso.TabIndex = 0;
@@ -152,8 +145,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 332);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(74, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 1;
@@ -161,22 +153,30 @@
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(270, 326);
-            this.Result.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Result.Location = new System.Drawing.Point(180, 212);
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(500, 26);
-            this.Result.Text = "";
+            this.Result.Size = new System.Drawing.Size(335, 20);
             this.Result.TabIndex = 2;
+            // 
+            // Out
+            // 
+            this.Out.Location = new System.Drawing.Point(180, 238);
+            this.Out.Name = "Out";
+            this.Out.Size = new System.Drawing.Size(333, 23);
+            this.Out.TabIndex = 3;
+            this.Out.Text = "Xóa";
+            this.Out.UseVisualStyleBackColor = true;
+            this.Out.Click += new System.EventHandler(this.Out_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 411);
+            this.ClientSize = new System.Drawing.Size(539, 267);
+            this.Controls.Add(this.Out);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Convert Hex, Dec, Bin";
             this.groupBox1.ResumeLayout(false);
@@ -200,6 +200,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Result;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Out;
     }
 }
 
