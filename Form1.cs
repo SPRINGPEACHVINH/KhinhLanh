@@ -19,8 +19,7 @@ namespace Lab1_Bai4
             InitializeComponent();
         }
 
-        string result = "";
-        string num = "";     
+        string result = "";   
         string num_hex = "";
         string num_bin = "";
         string num_dec = "";
@@ -43,6 +42,11 @@ namespace Lab1_Bai4
         {
             try
             {
+                if(Origin_num.Text == "" || Destinate_num.Text == "" || textBox1.Text == "")
+                {
+                    MessageBox.Show("Please fill all the information", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if(Origin_num.Text == "Decimal")
                 {
                     int midle = int.Parse(textBox1.Text);
@@ -55,7 +59,7 @@ namespace Lab1_Bai4
                     int midle = int.Parse(textBox1.Text);
                     if (!regex_bin.IsMatch(textBox1.Text))
                     {
-                        MessageBox.Show("Invalid Binary Number");
+                        MessageBox.Show("Invalid Binary Number", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     else
@@ -70,7 +74,7 @@ namespace Lab1_Bai4
                     string midle = textBox1.Text;
                     if (!regex_hex.IsMatch(midle))
                     {
-                        MessageBox.Show("Invalid Hex Number");
+                        MessageBox.Show("Invalid Hex Number", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -92,9 +96,9 @@ namespace Lab1_Bai4
                     Result.Text = num_hex;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error of hethong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
